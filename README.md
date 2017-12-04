@@ -29,7 +29,14 @@ We prepared the data set to create the sentence6 for each story with the random 
 
 ## Methods
 ### Word2vec
+Word2vec is one of the word embedding algorithms that are designed by Google using shallow neural networks. Like other word embeddings, this model maps the word from a sparse discrete space to a dense continuous one. 
+The first method for implementation was using gensim word2vec library along with Google News 300-Feature pretrained model. Using this pretrained model, we obtained a feature map for each of train, test-val, and test-test. Then running a PCA, on top of that reduced the feature size to 50 features for each story. 
+The second method was using MLlib Word2vec library, which let us train a word2vec model using our training dataset. Having that model, we were able to run word2vec on spark, as well. 
+
 ### Sentiment Last
+The assumption behind this method was that the last sentence of story has similar sentiment and emotion as the story-ending and the idea came from the original paper [1]. The dataset that we used for sentiment analysis was NRC Emotion Lexicon [3], which is a crowd-source dataset. Each of the last sentence and the candidates for the end of the story are sent to a function which computes the average of positiveness and negative of the sentence words, as well as following emotions: 'anger','joy','fear','trust','anticipation','surprise','disgust'
+Then for each of two candidates, the feature vector is computed as the difference between sentiment of the last sentence and that candidate. 
+
 ### Logistic Regression
 In this story ending classification framework we used the classification method called Logistic Regression. Basically Logistic Regression is the classification approach that helps analyse the association between categorical dependant variable and set of independent variables. Here the dependant variable is categorical or quantitative.
 
@@ -112,10 +119,15 @@ Source code is submitted as a zip file in the course project submission.
 ## Installation
 #### Dependencies
 python 2.6.6
-
 Numpy
-
 Apache Spark
+
+python 3.6.0
+Apache Spark
+Gensim
+MLlib
 ## References
 [1] Mostafazadeh, N., Chambers, N., He, X., Parikh, D., Batra, D., Vanderwende, L., ... & Allen, J. (2016). A corpus and evaluation framework for deeper understanding of commonsense stories. arXiv preprint arXiv:1604.01696.
 [2] Roemmele, M., Kobayashi, S., Inoue, N., & Gordon, A. M. (2017). An rnn-based binary classifier for the story cloze test. LSDSem 2017, 74.
+[3] Mohammad, S. M., & Turney, P. D. (2013). Crowdsourcing a word–emotion association lexicon. Computational Intelligence, 29(3), 436-465.
+[4] Google Word2Vec Project, https://code.google.com/archive/p/word2vec/
