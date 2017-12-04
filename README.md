@@ -59,6 +59,18 @@ Jaishree Ranganathan - Logistic Regression, ROC, Accuracy Calculation
 Maryam Tavakoli - Word2Vec, Sentiment Last
 ## Demo
 
+| Sentence1       | Sentence2       | Sentence3       | Sentence4       | Sentence5  | Sentence6 |Correct Ending|
+|-----------------|-----------------|-----------------|-----------------|------------|-----------|--------------|
+|David noticed he had put on a lot of weight recently.|He examined his habits to try and figure out the reason.|He realized he'd been eating too much fast food lately.|He stopped going to burger places and started a vegetarian diet.|After a few weeks, he started to feel much better.|Hers was picked.|sentence 5|
+
+| Sentence1       | Sentence2       | Sentence3       | Sentence4       | Sentence5  | Label |
+|-----------------|-----------------|-----------------|-----------------|------------|-------|
+|David noticed he had put on a lot of weight recently.|He examined his habits to try and figure out the reason.|He realized he'd been eating too much fast food lately.|He stopped going to burger places and started a vegetarian diet.|After a few weeks, he started to feel much better.|1(Correct Ending)|
+
+| Sentence1       | Sentence2       | Sentence3       | Sentence4       | Sentence6  | Label |
+|-----------------|-----------------|-----------------|-----------------|------------|-------|
+|David noticed he had put on a lot of weight recently.|He examined his habits to try and figure out the reason.|He realized he'd been eating too much fast food lately.|He stopped going to burger places and started a vegetarian diet.|Hers was picked.|0(Correct Ending)|
+
 ## Evaluation
 #### Experiment1: Logistic Regression on Word2Vec Data
 
