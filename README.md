@@ -105,8 +105,8 @@ Logistic Regression:
 
 ## Source Code
 Source code is submitted as a zip file in the course project submission.
-1. LRGA.py
-2.
+1. LRGA_ROC.py - Used BinaryClassification Metric ROC
+2. LGRA_calcAccuracy.py - Calculated accuracy based on actual and predicted labels
 3.
 
 ## Installation
