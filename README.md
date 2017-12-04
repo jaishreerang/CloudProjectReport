@@ -104,6 +104,18 @@ Logistic Regression:
 2) Resulting evaluation of Area under ROC curve will be displayed in console.
 
 ## Source Code
+Source code is submitted as a zip file in the course project submission.
+1. LRGA.py
+2.
+3.
+
+## Installation
+#### Dependencies
+python 2.6.6
+
+Numpy
+
+Apache Spark
 ## References
 [1] Mostafazadeh, N., Chambers, N., He, X., Parikh, D., Batra, D., Vanderwende, L., ... & Allen, J. (2016). A corpus and evaluation framework for deeper understanding of commonsense stories. arXiv preprint arXiv:1604.01696.
 [2] Roemmele, M., Kobayashi, S., Inoue, N., & Gordon, A. M. (2017). An rnn-based binary classifier for the story cloze test. LSDSem 2017, 74.
