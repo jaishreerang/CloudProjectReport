@@ -18,8 +18,7 @@ The data set used for the project is ROCStories, Cloze Test Competition dataset 
 The training dataset, did not contain the false entries, in this case the sentence 6 which is the wrong ending for the story. The sample data is shown in table 1.
 
 | StoryID        | Title           | Sentence1       | Sentence2       | Sentence3       | Sentence4       | Sentence5  |
-
-| -------------- |:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|-----------:|
+|----------------|-----------------|-----------------|-----------------|-----------------|-----------------|------------|
 
 | 8bbe6d11-1e2e-413c-bf81-eaea05f4f1bd| right-aligned   | $1600           |                 |                 |                 |            |
 
