@@ -31,7 +31,9 @@ We prepared the data set to create the sentence6 for each story with the random 
 ### Word2vec
 ### Sentiment Last
 ### Logistic Regression
-In this story ending classification fanework
+In this story ending classification framework we used the classification method called Logistic Regression. Basically Logistic Regression is the classification approach that helps analyse the association between categorical dependant variable and set of independent variables. Here the dependant variable is categorical or quantitative.
+
+In our dataset we have two class labels as 0 0r 1 indicating whether the last sentence is right story ending (1) or wrong story ending (0). We have list of independent variables, which are the sentences 1 to 4. The independent variables are represented in different formats based on the methods Word2Vec and Sentiment Last.
 ### Working and Failed Methods
 ## Demo
 ## Evaluation
