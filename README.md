@@ -33,7 +33,12 @@ We prepared the data set to create the sentence6 for each story with the random 
 ### Logistic Regression
 In this story ending classification framework we used the classification method called Logistic Regression. Basically Logistic Regression is the classification approach that helps analyse the association between categorical dependant variable and set of independent variables. Here the dependant variable is categorical or quantitative.
 
-In our dataset we have two class labels as 0 0r 1 indicating whether the last sentence is right story ending (1) or wrong story ending (0). We have list of independent variables, which are the sentences 1 to 4. The independent variables are represented in different formats based on the methods Word2Vec and Sentiment Last.
+In our dataset we have two class labels as 0 0r 1 indicating whether the last sentence is right story ending (1) or wrong story ending (0). We have list of independent variables, which are the sentences 1 to 4. The independent variables are represented in different formats based on the methods Word2Vec and Sentiment Last. The Gradient Ascent approach is implemented as part of thsi project. The derivation for Gradient Ascent is given below.
+
+Gradient Ascent: 
+![alt text](https://github.com/jaishreerang/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+Logistic Regression is implemented in pyspark
 ### Working and Failed Methods
 ## Demo
 ## Evaluation
