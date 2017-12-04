@@ -36,7 +36,7 @@ In this story ending classification framework we used the classification method 
 In our dataset we have two class labels as 0 0r 1 indicating whether the last sentence is right story ending (1) or wrong story ending (0). We have list of independent variables, which are the sentences 1 to 4. The independent variables are represented in different formats based on the methods Word2Vec and Sentiment Last. The Gradient Ascent approach is implemented as part of thsi project. The derivation for Gradient Ascent is given below.
 
 Gradient Ascent: 
-![alt text](https://github.com/jaishreerang/CloudProjectReport/image1.png "Gradient Ascent Equation")
+![alt text](https://github.com/jaishreerang/CloudProjectReport/image1.png "GradientAscent Equation")
 
 Logistic Regression is implemented in pyspark
 ### Working and Failed Methods
