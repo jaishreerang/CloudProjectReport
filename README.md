@@ -42,57 +42,57 @@ Logistic Regression is implemented in pyspark.
 ## Demo
 
 ## Evaluation
-####Experiment1: Logistic Regression on Word2Vec Data
+#### Experiment1: Logistic Regression on Word2Vec Data
 
-#####Input Data
+##### Input Data
 
 Train Data          : pca_50_train_vector.csv
 
 Test Data           : pca_50_test_test_vector
 
-#####Area Under ROC Curve:
+##### Area Under ROC Curve:
 
-#####Input Data
+##### Input Data
 
 Train Data          : pca_50_train_vector.csv
 
 Test Data           : pca_50_test_val_vector
 
-#####Area Under ROC Curve:
+##### Area Under ROC Curve:
 
-#####Input Data
+##### Input Data
 
 Train Data          : pca_50_test_val.csv
 
 Test Data           : pca_50_test_test_vector
 
-#####Area Under ROC Curve:
+##### Area Under ROC Curve:
 
-####Experiment2: Logistic Regression on Sentiment Last Data
+#### Experiment2: Logistic Regression on Sentiment Last Data
 
-#####Input Data
+##### Input Data
 
 Train Data          : sentiment_train.csv
 
 Test Data           : sentiment_test_test.csv
 
-#####Area Under ROC Curve:
+##### Area Under ROC Curve:
 
-#####Input Data
+##### Input Data
 
 Train Data          : sentiment_train.csv
 
 Test Data           : sentiment_test_val.csv
 
-#####Area Under ROC Curve:
+##### Area Under ROC Curve:
 
-#####Input Data
+##### Input Data
 
 Train Data          : sentiment_test_val.csv
 
 Test Data           : sentiment_test_test.csv
 
-#####Area Under ROC Curve:
+##### Area Under ROC Curve:
 
 ## Execution Instruction
 Logistic Regression:
@@ -100,7 +100,7 @@ Logistic Regression:
 1)To execute in standalone program
 
   spark-submit <filename.py> <input train data> <iterations> <input test data>
-  
+
 2) Resulting evaluation of Area under ROC curve will be displayed in console.
 
 ## Source Code
