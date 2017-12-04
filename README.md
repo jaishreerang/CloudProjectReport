@@ -119,15 +119,17 @@ Source code is submitted as a zip file in the course project submission.
 ## Installation
 #### Dependencies
 python 2.6.6
-Numpy
+Numpy 1.4.1
 Apache Spark
 
 python 3.6.0
 Apache Spark
 Gensim
-MLlib
 ## References
 [1] Mostafazadeh, N., Chambers, N., He, X., Parikh, D., Batra, D., Vanderwende, L., ... & Allen, J. (2016). A corpus and evaluation framework for deeper understanding of commonsense stories. arXiv preprint arXiv:1604.01696.
+
 [2] Roemmele, M., Kobayashi, S., Inoue, N., & Gordon, A. M. (2017). An rnn-based binary classifier for the story cloze test. LSDSem 2017, 74.
+
 [3] Mohammad, S. M., & Turney, P. D. (2013). Crowdsourcing a word–emotion association lexicon. Computational Intelligence, 29(3), 436-465.
+
 [4] Google Word2Vec Project, https://code.google.com/archive/p/word2vec/
