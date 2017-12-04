@@ -143,9 +143,11 @@ Gensim
 
 ## Final Product and Aspects Achieved
 
-Final Product: Read the story data from ROCStories corpus and predict the outcome of them. 
+#### Final Product
 
-Definitely accomplished
+Read the story data from ROCStories corpus and predict the outcome of them. 
+
+#### Definitely accomplished
 
 Logistic regression on cloud using Spark
 ROC Evaluation for Logistic Regression
@@ -155,6 +157,9 @@ Translating the sentences into vectors using word2vec pretrained model by averag
 
 Sentiment-Last method, and compare with the word2vec method.
 
+#### Likely Accomplished
+
+#### Ideally Accomplished
 
 ## References
 [1] Mostafazadeh, N., Chambers, N., He, X., Parikh, D., Batra, D., Vanderwende, L., ... & Allen, J. (2016). A corpus and evaluation framework for deeper understanding of commonsense stories. arXiv preprint arXiv:1604.01696.
