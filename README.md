@@ -37,12 +37,50 @@ In our dataset we have two class labels as 0 0r 1 indicating whether the last se
 
 Gradient Ascent: 
 ![alt text](https://github.com/jaishreerang/CloudProjectReport/image1.png "GradientAscent Equation")
-
-Logistic Regression is implemented in pyspark
+Logistic Regression is implemented in pyspark.
 ### Working and Failed Methods
 ## Demo
+
 ## Evaluation
+Experiment1: Logistic Regression on Word2Vec Data
+
+Input Data: 
+Train Data          : pca_50_train_vector.csv
+Test Data           : pca_50_test_test_vector
+Area Under ROC Curve:
+
+Input Data: 
+Train Data          : pca_50_train_vector.csv
+Test Data           : pca_50_test_val_vector
+Area Under ROC Curve:
+
+Input Data: 
+Train Data          : pca_50_test_val.csv
+Test Data           : pca_50_test_test_vector
+Area Under ROC Curve:
+
+Experiment2: Logistic Regression on Sentiment Last Data
+Input Data: 
+Train Data          : sentiment_train.csv
+Test Data           : sentiment_test_test.csv
+Area Under ROC Curve:
+
+Input Data: 
+Train Data          : sentiment_train.csv
+Test Data           : sentiment_test_val.csv
+Area Under ROC Curve:
+
+Input Data: 
+Train Data          : sentiment_test_val.csv
+Test Data           : sentiment_test_test.csv
+Area Under ROC Curve:
+
 ## Execution Instruction
+Logistic Regression:
+
+1)To execute in standalone program
+  spark-submit <filename.py> <input train data> <iterations> <input test data>
+2) Resulting evaluation of Area under ROC curve will be displayed in console.
 ## Source Code
 ## References
 [1] Mostafazadeh, N., Chambers, N., He, X., Parikh, D., Batra, D., Vanderwende, L., ... & Allen, J. (2016). A corpus and evaluation framework for deeper understanding of commonsense stories. arXiv preprint arXiv:1604.01696.
