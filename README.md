@@ -16,8 +16,11 @@ The data set used for the project is ROCStories, Cloze Test Competition dataset 
 
 ## Data Preparation
 The training dataset, did not contain the false entries, in this case the sentence 6 which is the wrong ending for the story. The sample data is shown in table 1.
+
 | StoryID        | Title           | Sentence1       | Sentence2       | Sentence3       | Sentence4       | Sentence5  |
+
 | -------------- |:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|-----------:|
+
 | 8bbe6d11-1e2e-413c-bf81-eaea05f4f1bd| right-aligned   | $1600           |                 |                 |                 |            |
 
 We prepared the data set to create the sentence6 for each story with the random approach. In this approach each story ending (sentence 6) is randomly selected entry from a different story in the training set. There are other approaches for generating story ending like nearest ending and RNN. According to [2] we chose to use random approach based on the evaluation results.
