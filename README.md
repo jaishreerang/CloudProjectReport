@@ -1,6 +1,6 @@
-# Project Report: Story Ending Prediction
+# Project Report: Story Ending Classification
 ## Introduction
-'Story Ending Prediction' is a commonsense learning framework for evaluating story understanding. This Framework requires a system to classify the correct ending to a four-sentence story. Story here means casually (logically) linked set of events.
+'Story Ending Classification' is a commonsense learning framework for evaluating story understanding. This Framework requires a system to classify the correct ending to a four-sentence story. Story here means casually (logically) linked set of events.
 
 
 Example story [1]
@@ -31,6 +31,7 @@ We prepared the data set to create the sentence6 for each story with the random 
 ### Word2vec
 ### Sentiment Last
 ### Logistic Regression
+In this story ending classification fanework
 ### Working and Failed Methods
 ## Demo
 ## Evaluation
