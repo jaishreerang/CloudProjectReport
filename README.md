@@ -1,4 +1,9 @@
 # Project Report: Story Ending Classification
+## Team Members
+Jaishree Ranganathan
+
+Maryam Tavakoli 
+
 ## Introduction
 'Story Ending Classification' is a commonsense learning framework for evaluating story understanding. This Framework requires a system to classify the correct ending to a four-sentence story. Story here means casually (logically) linked set of events.
 
@@ -45,7 +50,13 @@ In our dataset we have two class labels as 0 0r 1 indicating whether the last se
 Gradient Ascent: 
 ![alt text](https://github.com/jaishreerang/CloudProjectReport/image1.png "GradientAscent Equation")
 Logistic Regression is implemented in pyspark.
+
 ### Working and Failed Methods
+
+## Work Division - Team Members
+Jaishree Ranganathan - Logistic Regression, ROC, Accuracy Calculation
+
+Maryam Tavakoli - Word2Vec, Sentiment Last
 ## Demo
 
 ## Evaluation
@@ -117,14 +128,34 @@ Source code is submitted as a zip file in the course project submission.
 3.
 
 ## Installation
-#### Dependencies
+#### Dependencies/External Tools
 python 2.6.6
+
 Numpy 1.4.1
+
 Apache Spark
 
 python 3.6.0
+
 Apache Spark
+
 Gensim
+
+## Final Product and Aspects Achieved
+
+Final Product: Read the story data from ROCStories corpus and predict the outcome of them. 
+
+Definitely accomplished
+
+Logistic regression on cloud using Spark
+ROC Evaluation for Logistic Regression
+Accuracy calculated using predicted and actual labels
+
+Translating the sentences into vectors using word2vec pretrained model by averaging the word-vectors of each sentence on cloud. We need to copy the pre-trained model on all the nodes for that.
+
+Sentiment-Last method, and compare with the word2vec method.
+
+
 ## References
 [1] Mostafazadeh, N., Chambers, N., He, X., Parikh, D., Batra, D., Vanderwende, L., ... & Allen, J. (2016). A corpus and evaluation framework for deeper understanding of commonsense stories. arXiv preprint arXiv:1604.01696.
 
@@ -133,3 +164,5 @@ Gensim
 [3] Mohammad, S. M., & Turney, P. D. (2013). Crowdsourcing a word–emotion association lexicon. Computational Intelligence, 29(3), 436-465.
 
 [4] Google Word2Vec Project, https://code.google.com/archive/p/word2vec/
+
+[5] https://stackoverflow.com/questions/41046843/how-to-load-a-word2vec-model-and-call-its-function-into-the-mapper/41190031#41190031
