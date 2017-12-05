@@ -143,36 +143,6 @@ Test Data           : word2vec600_test_test_vector.csv
 ##### Area Under ROC Curve: 0.60196979134226103
 ##### ('Area Under ROC MLlib:', 0.6034430330757854)
 
-##### Input Data
-
-Train Data          : word2vec600_train_vector.csv
-
-Test Data           : word2vec600_test_test_vector.csv
-
-##### Area Under ROC Curve: 
-##### ('Area Under ROC MLlib:', )
-
-## Execution Instruction
-Logistic Regression:
-
-1)To execute in standalone program (LRGA_ROC.py and LRGA_calcAccuracy.py)
-
-  spark-submit filename.py input_train_data number_of_iterations input_test_data
-  
-  Note: Number of iterations is 100 for this dataset
-
-2) Resulting evaluation of Area under ROC curve will be displayed in console.
-
-3) To execute in standalone program (LGMLlib.py)
-
-spark-submit filename.py input_train_data input_test_data
-
-## Source Code
-Source code is submitted as a zip file in the course project submission.
-1. LRGA_ROC.py - Used BinaryClassification Metric ROC
-2. LRGA_calcAccuracy.py - Calculated accuracy based on actual and predicted labels
-3. LGMLlib.py - Used MLlib to compare the results
-
 ## Installation
 #### Dependencies/External Tools
 python 2.6.6
