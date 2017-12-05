@@ -17,8 +17,6 @@ Bill challenges Sam ----Enables----> Sam agrees to play ----Before---->Sam pract
 ## Dataset
 The data set used for the project is ROCStories, Cloze Test Competition dataset [1]. This dataset contains around 50,000 (train set) common sense stories, which have high-quality and a 4-sentence structure. Each record in the training data contains storyid, title, sentence1, sentence2, sentence3, sentence4, sentence5. There are also validation and test set which contains same fields as that of the training set, additinally includes the sentence6 which is wrong ending for each story.
 
-## Data Collection
-
 ## Data Preparation
 The training dataset, did not contain the false entries, in this case the sentence 6 which is the wrong ending for the story. The sample data is shown in table below.
 
@@ -26,7 +24,7 @@ The training dataset, did not contain the false entries, in this case the senten
 |----------------|-----------------|-----------------|-----------------|-----------------|-----------------|------------|
 | 8bbe6d11-1e2e-413c-bf81-eaea05f4f1bd|David Drops the Weight|David noticed he had put on a lot of weight recently.|He examined his habits to try and figure out the reason.|He realized he'd been eating too much fast food lately.|He stopped going to burger places and started a vegetarian diet.|After a few weeks, he started to feel much better.|            
 
-We prepared the data set to create the sentence6 for each story with the random approach. In this approach each story ending (sentence 6) is randomly selected entry from a different story in the training set. There are other approaches for generating story ending like nearest ending and RNN. According to [2] we chose to use random approach based on the evaluation results. The resulting train data after appending the sentence 6 is as in below table.
+We prepared the data set to create the sentence6 for each story with the random approach. In this approach each story ending (sentence 6) is randomly selected from the ending part of a different story in the training set. After that, the sentence 5 & 6 of each story are shuffled to have randomly T/F location in each place, and labeled all the records based on the location of the correct ending. There are other approaches for generating story ending like nearest ending and RNN. According to [2] we chose to use random approach based on the evaluation results. The resulting train data after appending the sentence 6 is as in below table.
 
 | StoryID        | Title           | Sentence1       | Sentence2       | Sentence3       | Sentence4       | Sentence5  | Sentence6 |
 |----------------|-----------------|-----------------|-----------------|-----------------|-----------------|------------|-----------|
@@ -38,7 +36,7 @@ This generated the training data with 100,000 instances as each story will have 
 ### Word2vec
 Word2vec is one of the word embedding algorithms that are designed by Google using shallow neural networks. Like other word embeddings, this model maps the word from a sparse discrete space to a dense continuous one. 
 The first method for implementation was using gensim word2vec library along with Google News 300-Feature pretrained model. Using this pretrained model, we obtained a feature map for each of train, test-val, and test-test. Then running a PCA, on top of that reduced the feature size to 50 features for each story. 
-The second method was using MLlib Word2vec library, which let us train a word2vec model using our training dataset. Having that model, we were able to run word2vec on spark, as well. 
+The second method was using MLlib Word2vec library, which let us train a word2vec model using our training dataset. Having that model, we were able to train a word2vec model on spark, but we couldn't use the model in mapper based on an incompatibility of pyspark in carrying JavaRDD to mapper [5]. 
 
 ### Sentiment Last
 The assumption behind this method was that the last sentence of story has similar sentiment and emotion as the story-ending and the idea came from the original paper [1]. The dataset that we used for sentiment analysis was NRC Emotion Lexicon [3], which is a crowd-source dataset. Each of the last sentence and the candidates for the end of the story are sent to a function which computes the average of positiveness and negative of the sentence words, as well as following emotions: 'anger','joy','fear','trust','anticipation','surprise','disgust'
@@ -54,7 +52,8 @@ Gradient Ascent Logistic Regression is implemented in pyspark.
 ## Work Division - Team Members
 Jaishree Ranganathan - Logistic Regression, ROC, Accuracy Calculation, MLlib implementation (For comparison)
 
-Maryam Tavakoli - Word2Vec, Sentiment Last
+Maryam Tavakoli - Data Preparation, Negative Sampling, Word2Vec, PCA-transformation, Sentiment Last method, Gensim Logistic Regression & AUC (For data evaluation)
+
 ## Demo
 
 | Sentence1       | Sentence2       | Sentence3       | Sentence4       | Sentence5  | Sentence6 |Correct Ending|
@@ -70,6 +69,11 @@ Maryam Tavakoli - Word2Vec, Sentiment Last
 |David noticed he had put on a lot of weight recently.|He examined his habits to try and figure out the reason.|He realized he'd been eating too much fast food lately.|He stopped going to burger places and started a vegetarian diet.|Hers was picked.|0(Correct Ending)|
 
 ## Evaluation
+In order to do the evaluation, we trained the model using three sets of features: Word2Vec, 50 Features extracted from word2vec using PCA, and finally sentiment last. Also, based on the fact that we generated the training data negative samples randomly, we tried to train by validation data in some of the cases, and interestingly, some of them had better results. We evaluated the method by primarily AUC on local machine and then ROC metric on spark (we brought only the second one here).
+
+
+As most of the results may suggest, while these methods are suitable as an starting point of the prediction, we need more complicated feature extraction and learning method to be able to tackle the complexity of story understanding, specifically in this framework. The reason behind that is that semantic of story is far beyond even understanding the sentences themselves. Even though these stories were not long, still analyzing the context was so important to get an acceptable result in predicting the right ending. Yet, for some of more semantic based methods like word2vec, you can see a higher result. 
+
 #### Experiment1: Logistic Regression on Word2Vec Data (Using our Model and using MLlib)
 
 ##### Input Data
@@ -173,9 +177,11 @@ Logistic regression on cloud using Spark
 ROC Evaluation for Logistic Regression
 Accuracy calculated using predicted and actual labels
 
-Translating the sentences into vectors using word2vec pretrained model by averaging the word-vectors of each sentence on cloud. We need to copy the pre-trained model on all the nodes for that.
+Translating the sentences into vectors using word2vec pretrained model by averaging the word-vectors of each sentence on local and cloud. For cloud we need to copy the pre-trained model on all the nodes for that.
 
 Sentiment-Last method, and compare with the word2vec method.
+
+We also had to do Data Preparation, Negative Sampling, PCA-transformation, and some local data evaluation using gensim library
 
 #### Observations
 
