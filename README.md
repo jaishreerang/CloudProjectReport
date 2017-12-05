@@ -72,15 +72,7 @@ Maryam Tavakoli - Word2Vec, Sentiment Last
 |David noticed he had put on a lot of weight recently.|He examined his habits to try and figure out the reason.|He realized he'd been eating too much fast food lately.|He stopped going to burger places and started a vegetarian diet.|Hers was picked.|0(Correct Ending)|
 
 ## Evaluation
-#### Experiment1: Logistic Regression on Word2Vec Data
-
-##### Input Data
-
-Train Data          : pca_50_train_vector.csv
-
-Test Data           : pca_50_test_test_vector
-
-##### Area Under ROC Curve:
+#### Experiment1: Logistic Regression on Word2Vec Data (Using our Model and using MLlib)
 
 ##### Input Data
 
@@ -88,7 +80,19 @@ Train Data          : pca_50_train_vector.csv
 
 Test Data           : pca_50_test_val_vector
 
-##### Area Under ROC Curve:
+##### Area Under ROC Curve: 0.49785703650253704
+
+##### ('Area Under ROC MLlib:', 0.49839277737690274)
+
+##### Input Data
+
+Train Data          : pca_50_train_vector.csv
+
+Test Data           : pca_50_test_test_vector
+
+##### Area Under ROC Curve: 0.48529955872248087
+
+##### ('Area Under ROC MLlib:', 0.4850328552654134)
 
 ##### Input Data
 
@@ -96,9 +100,11 @@ Train Data          : pca_50_test_val.csv
 
 Test Data           : pca_50_test_test_vector
 
-##### Area Under ROC Curve:
+##### Area Under ROC Curve: 0.59100088537844109
 
-#### Experiment2: Logistic Regression on Sentiment Last Data
+##### ('Area Under ROC MLlib:', 0.5979624669983753)
+
+#### Experiment2: Logistic Regression on Sentiment Last Data (Using our Model and using MLlib)
 
 ##### Input Data
 
@@ -106,7 +112,9 @@ Train Data          : sentiment_train.csv
 
 Test Data           : sentiment_test_test.csv
 
-##### Area Under ROC Curve:
+##### Area Under ROC Curve: 0.46088903285722715
+
+##### ('Area Under ROC MLlib:', 0.47264348949858265)
 
 ##### Input Data
 
@@ -114,7 +122,9 @@ Train Data          : sentiment_train.csv
 
 Test Data           : sentiment_test_val.csv
 
-##### Area Under ROC Curve:
+##### Area Under ROC Curve: 0.45532441237388588
+
+##### ('Area Under ROC MLlib:', 0.47041526743849271)
 
 ##### Input Data
 
@@ -122,7 +132,9 @@ Train Data          : sentiment_test_val.csv
 
 Test Data           : sentiment_test_test.csv
 
-##### Area Under ROC Curve:
+##### Area Under ROC Curve: 0.53778644059836089
+
+##### ('Area Under ROC MLlib:', 0.53945034691300764)
 
 ## Execution Instruction
 Logistic Regression:
@@ -152,6 +164,8 @@ python 3.6.0
 Apache Spark
 
 Gensim
+
+NLTK stopwords
 
 ## Final Product and Aspects Achieved
 
