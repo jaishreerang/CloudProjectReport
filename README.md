@@ -189,9 +189,12 @@ Translating the sentences into vectors using word2vec pretrained model by averag
 
 Sentiment-Last method, and compare with the word2vec method.
 
-#### Likely Accomplished
+#### Observations
 
-#### Ideally Accomplished
+1. The results obtained with the dataset prepared using word2Vec and Sentiment Models are in the range of 50% to 60%. We see that these models do not replicate the deep semantic relationship between the sentences.
+
+2. In logistic Regression implementation used the divide by number of instances after calculating the summation, which helped avoid the overflow error.
+ 
 
 ## References
 [1] Mostafazadeh, N., Chambers, N., He, X., Parikh, D., Batra, D., Vanderwende, L., ... & Allen, J. (2016). A corpus and evaluation framework for deeper understanding of commonsense stories. arXiv preprint arXiv:1604.01696.
