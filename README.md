@@ -43,7 +43,7 @@ The assumption behind this method was that the last sentence of story has simila
 Then for each of two candidates, the feature vector is computed as the difference between sentiment of the last sentence and that candidate. 
 
 ### Logistic Regression
-In this story ending classification framework we used the classification method called Logistic Regression. Basically Logistic Regression is the classification approach that helps analyse the association between categorical dependant variable and set of independent variables. Here the dependant variable is categorical or quantitative.
+In this story ending classification framework we used the classification method called Logistic Regression. Basically Logistic Regression is the classification approach that helps analyse the association between categorical dependant variable and set of independent variables. Here the dependant variable is categorical.
 
 In our dataset we have two class labels as 0 0r 1 indicating whether the last sentence is right story ending (1) or wrong story ending (0). We have list of independent variables, which are the sentences 1 to 4. The independent variables are represented in different formats based on the methods Word2Vec and Sentiment Last. The Gradient Ascent approach is implemented as part of thsi project. The derivation for Gradient Ascent [6] equation given below.
 
@@ -139,17 +139,21 @@ Test Data           : sentiment_test_test.csv
 ## Execution Instruction
 Logistic Regression:
 
-1)To execute in standalone program
+1)To execute in standalone program (LRGA_ROC.py and LRGA_calcAccuracy.py)
 
-  spark-submit <filename.py> <input train data> <iterations> <input test data>
+  spark-submit <filename.py> <input train data> <number of iterations> <input test data>
 
 2) Resulting evaluation of Area under ROC curve will be displayed in console.
+
+3) To execute in standalone program (LGMLlib.py)
+
+spark-submit <filename.py> <input train data> <input test data>
 
 ## Source Code
 Source code is submitted as a zip file in the course project submission.
 1. LRGA_ROC.py - Used BinaryClassification Metric ROC
-2. LGRA_calcAccuracy.py - Calculated accuracy based on actual and predicted labels
-3.
+2. LRGA_calcAccuracy.py - Calculated accuracy based on actual and predicted labels
+3. LGMLlib.py - Used MLlib to compare the results
 
 ## Installation
 #### Dependencies/External Tools
