@@ -193,7 +193,11 @@ Sentiment-Last method, and compare with the word2vec method.
 
 1. The results obtained with the dataset prepared using word2Vec and Sentiment Models are in the range of 50% to 60%. We see that these models do not replicate the deep semantic relationship between the sentences.
 
-2. In logistic Regression implementation used the divide by number of instances after calculating the summation, which helped avoid the overflow error.
+2. We observe from the evaluation results that the training with validation data and test with test data yields higher accuracy than the train data and test data. This might be because in the train data we generated the random sentence for wrong ending. But rather the validation data was provided with the semantically related wrong ending sentence. So if the train data wrong ending was generated with appropriate sentence as it was in validation data, we believe better results would have been achieved.
+
+3. From the evaluation it is also observed that the Principal Component Analysis data with Word2Vec model yielded little higher accuracy than the sentiment last model dataset. This is because Word2Vec accounts for higher semantic similarity than the sentiment last model.
+
+4. In logistic Regression implementation used the divide by number of instances after calculating the summation, which helped avoid the overflow error.
  
 
 ## References
