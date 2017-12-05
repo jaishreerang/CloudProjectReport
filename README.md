@@ -52,7 +52,7 @@ Gradient Ascent Logistic Regression is implemented in pyspark.
 ## Work Division - Team Members
 Jaishree Ranganathan - Logistic Regression, ROC, Accuracy Calculation, MLlib implementation (For comparison)
 
-Maryam Tavakoli - Data Preparation, Negative Sampling, Word2Vec, PCA-transformation, Sentiment Last method, Gensim Logistic Regression & AUC (For data evaluation)
+Maryam Tavakoli - Data Preparation, Negative Sampling, Word2Vec, PCA-transformation, Sentiment Last method, Logistic Regression & AUC using sklearn (For data evaluation)
 
 ## Demo
 
@@ -181,7 +181,7 @@ Translating the sentences into vectors using word2vec pretrained model by averag
 
 Sentiment-Last method, and compare with the word2vec method.
 
-We also had to do Data Preparation, Negative Sampling, PCA-transformation, and some local data evaluation using gensim library
+We also had to do Data Preparation, Negative Sampling, PCA-transformation, and some local data evaluation using sklearn library
 
 #### Observations
 
