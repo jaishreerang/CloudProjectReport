@@ -141,13 +141,15 @@ Logistic Regression:
 
 1)To execute in standalone program (LRGA_ROC.py and LRGA_calcAccuracy.py)
 
-  spark-submit <filename.py> <input train data> <number of iterations> <input test data>
+  spark-submit filename.py input_train_data number_of_iterations input_test_data
+  
+  Note: Number of iterations is 100 for this dataset
 
 2) Resulting evaluation of Area under ROC curve will be displayed in console.
 
 3) To execute in standalone program (LGMLlib.py)
 
-spark-submit <filename.py> <input train data> <input test data>
+spark-submit filename.py input_train_data input_test_data
 
 ## Source Code
 Source code is submitted as a zip file in the course project submission.
