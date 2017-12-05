@@ -134,6 +134,24 @@ Test Data           : sentiment_test_test.csv
 
 ##### ('Area Under ROC MLlib:', 0.53945034691300764)
 
+##### Input Data
+
+Train Data          : word2vec600_test_val_vector.csv
+
+Test Data           : word2vec600_test_test_vector.csv
+
+##### Area Under ROC Curve: 0.60196979134226103
+##### ('Area Under ROC MLlib:', 0.6034430330757854)
+
+##### Input Data
+
+Train Data          : word2vec600_train_vector.csv
+
+Test Data           : word2vec600_test_test_vector.csv
+
+##### Area Under ROC Curve: 
+##### ('Area Under ROC MLlib:', )
+
 ## Execution Instruction
 Logistic Regression:
 
@@ -171,6 +189,8 @@ Gensim
 
 NLTK stopwords
 
+sci-kit learn
+
 ## Final Product and Aspects Achieved
 
 #### Final Product
@@ -189,7 +209,7 @@ Sentiment-Last method, and compare with the word2vec method.
 
 #### Observations
 
-1. The results obtained with the dataset prepared using word2Vec and Sentiment Models are in the range of 50% to 60%. We see that these models do not replicate the deep semantic relationship between the sentences.
+1. The results obtained with the dataset prepared using word2Vec PCA and Sentiment Models are in the range of 50% to 60%. We see that these models do not replicate the deep semantic relationship between the sentences.
 
 2. We observe from the evaluation results that the training with validation data and test with test data yields higher accuracy than the train data and test data. This might be because in the train data we generated the random sentence for wrong ending. But rather the validation data was provided with the semantically related wrong ending sentence. So if the train data wrong ending was generated with appropriate sentence as it was in validation data, we believe better results would have been achieved.
 
