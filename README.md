@@ -32,6 +32,8 @@ We prepared the data set to create the sentence6 for each story with the random 
 |----------------|-----------------|-----------------|-----------------|-----------------|-----------------|------------|-----------|
 | 8bbe6d11-1e2e-413c-bf81-eaea05f4f1bd|David Drops the Weight|David noticed he had put on a lot of weight recently.|He examined his habits to try and figure out the reason.|He realized he'd been eating too much fast food lately.|He stopped going to burger places and started a vegetarian diet.|After a few weeks, he started to feel much better.|Hers was picked.|
 
+This generated the training data with 100,000 instances as each story will have a right ending and wrong ending entry in the train model.
+
 ## Methods
 ### Word2vec
 Word2vec is one of the word embedding algorithms that are designed by Google using shallow neural networks. Like other word embeddings, this model maps the word from a sparse discrete space to a dense continuous one. 
@@ -47,11 +49,11 @@ In this story ending classification framework we used the classification method 
 
 In our dataset we have two class labels as 0 0r 1 indicating whether the last sentence is right story ending (1) or wrong story ending (0). We have list of independent variables, which are the sentences 1 to 4. The independent variables are represented in different formats based on the methods Word2Vec and Sentiment Last. The Gradient Ascent approach is implemented as part of thsi project. The derivation for Gradient Ascent [6] equation given below.
 
-Gradient Ascent: 
-![alt text](https://github.com/jaishreerang/CloudProjectReport/image1.png "GradientAscent Equation")
-Logistic Regression is implemented in pyspark.
+Gradient Ascent Logistic Regression is implemented in pyspark.
 
 ### Working and Failed Methods
+
+
 
 ## Work Division - Team Members
 Jaishree Ranganathan - Logistic Regression, ROC, Accuracy Calculation, MLlib implementation (For comparison)
