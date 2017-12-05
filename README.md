@@ -51,10 +51,6 @@ In our dataset we have two class labels as 0 0r 1 indicating whether the last se
 
 Gradient Ascent Logistic Regression is implemented in pyspark.
 
-### Working and Failed Methods
-
-
-
 ## Work Division - Team Members
 Jaishree Ranganathan - Logistic Regression, ROC, Accuracy Calculation, MLlib implementation (For comparison)
 
