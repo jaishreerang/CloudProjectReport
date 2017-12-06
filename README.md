@@ -159,21 +159,11 @@ Test Data           : word2vec600_test_test_vector.csv
 
 ## Installation
 #### Dependencies/External Tools
-python 2.6.6
+Three different parts of the project needs three different dependencies:
 
-Numpy 1.4.1
+part 1: python 3.6.0, Gensim, numpy, NLTK stopwords, sci-kit learn
 
-Apache Spark
-
-python 3.6.0
-
-Apache Spark
-
-Gensim
-
-NLTK stopwords
-
-sci-kit learn
+part 2 and 3: python 2.6.6, Numpy 1.4.1, Apache Spark
 
 ## Final Product and Aspects Achieved
 
