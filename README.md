@@ -14,6 +14,12 @@ Bill thought he was a great basketball player. He challenged Sam to a friendly g
 
 Bill challenges Sam ----Enables----> Sam agrees to play ----Before---->Sam practices ----before---->Sam beats Bill
 
+## Motivation
+Human interactions have different forms for transfering information, and one of the oldest one is story-form. People use story structure to talk about their experience, ideas, observation or even believes. The information that flows through a story is more than those stored in isolated sentences. There are accumulative information that comes out of the whole story. This huge amount of information hidden in narrative and story formed data are motivation of NLP next generation narrative-base technology [7].
+
+
+Understanding stories in NLP has different aspect of complexity. Context, time frame, commmonsense knowledge, and characters are some of the important ones. In this project we used a framework that while carrying these complexities, it removes the burden of the text length by providing short stories. Also, to make the task just language understanding (and not language generation) it defines the task as sentence selection. By doing this project, we are taking the introductory step toward story-understanding. Of course, due to lack of time, we chose the simplest methods for analyzing the data, however, it can lead us to the better methodologies in the following steps of  the research.
+
 ## Dataset
 The data set used for the project is ROCStories, Cloze Test Competition dataset [1]. This dataset contains around 50,000 (train set) common sense stories, which have high-quality and a 4-sentence structure. Each record in the training data contains storyid, title, sentence1, sentence2, sentence3, sentence4, sentence5. There are also validation and test set which contains same fields as that of the training set, additinally includes the sentence6 which is wrong ending for each story.
 
@@ -206,3 +212,5 @@ We also had to do Data Preparation, Negative Sampling, PCA-transformation, and s
 [5] https://stackoverflow.com/questions/41046843/how-to-load-a-word2vec-model-and-call-its-function-into-the-mapper/41190031#41190031
 
 [6] http://cs229.stanford.edu/notes/cs229-notes1.pdf
+
+[7] Cambria, E., & White, B. (2014). Jumping NLP curves: A review of natural language processing research. IEEE Computational intelligence magazine, 9(2), 48-57.
