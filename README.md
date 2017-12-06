@@ -185,7 +185,7 @@ We also had to do Data Preparation, Negative Sampling, PCA-transformation, and s
 #### Likely and Ideally Accomplished
 
 We implemented PCA for feature selection.
-Based on the results with the current methods that we implemented we idetified future works implementation and methodology.
+Based on the results with the current methods that we implemented we identified future works implementation and methodology.
 
 #### Observations
 
