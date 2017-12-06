@@ -177,11 +177,15 @@ Logistic regression on cloud using Spark
 ROC Evaluation for Logistic Regression
 Accuracy calculated using predicted and actual labels
 
-Translating the sentences into vectors using word2vec pretrained model by averaging the word-vectors of each sentence on local and cloud. For cloud we need to copy the pre-trained model on all the nodes for that.
+Translating the sentences into vectors using word2vec pretrained model by averaging the word-vectors of each sentence on local.
 
-Sentiment-Last method, and compare with the word2vec method.
+Sentiment-Last method is implemented on local and cloud, and compare with the word2vec method.
 
 We also had to do Data Preparation, Negative Sampling, PCA-transformation, and some local data evaluation using sklearn library
+#### Likely and Ideally Accomplished
+
+We implemented PCA for feature selection.
+Based on the results with the current methods that we implemented we idetified future works implementation and methodology.
 
 #### Observations
 
