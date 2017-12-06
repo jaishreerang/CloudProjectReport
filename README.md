@@ -194,10 +194,11 @@ We also had to do Data Preparation, Negative Sampling, PCA-transformation, and s
 4. In logistic Regression implementation used the divide by number of instances after calculating the summation, which helped avoid the overflow error.
 
 ## Future works
+### Implementation
+In implementation part, we can improve the word2vec by training a model on a relavant dataset. Also, due to the problem we faced on spark, we need to redo that on hadoop streaming (that we couldn't do based on the timing). We also can try other sentiment analysis libraries like Stanford and compare the results with our implementation. Another improvement is moving all the code-parts to the spark/hadoop-streaming and implement some of the library methods by ourselves (like PCA) to make the performance higher. However, with these modifications we do not expect huge improvement in overall results. 
+
+### Methodology
 As we mentioned in the introduction, this work was just a beginning  step towards handling story processing. Following this step, and based on the result, we are sure that we need more context-dependent methods. We need methods that can carry the essense of all previous sentences and compare them with the current one. For that we think both lexicon-based and deep-learning based methods can come helpful for this task. We need to check both relatedness of the subject, event and verb of the candidate with the whole story, and the expctation of commonsense from the events in the story. The former depends more on lexicon analysis, part-of-speech, entity and event-extraction, while for the latter deep-learning methods, like rnn [2], trained on large corpus might be more helpful.
-
-
-One important factor in the stories that could be helpful in prediction, but had no effect in our methodology was subjects of the sentences. A good lexicon-based strategy would find the main subject of the story and check if 
 
 ## References
 [1] Mostafazadeh, N., Chambers, N., He, X., Parikh, D., Batra, D., Vanderwende, L., ... & Allen, J. (2016). A corpus and evaluation framework for deeper understanding of commonsense stories. arXiv preprint arXiv:1604.01696.
