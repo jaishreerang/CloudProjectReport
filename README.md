@@ -23,6 +23,7 @@ Understanding stories in NLP has different aspect of complexity. Context, time f
 ## Dataset
 The data set used for the project is ROCStories, Cloze Test Competition dataset [1]. This dataset contains around 50,000 (train set) common sense stories, which have high-quality and a 4-sentence structure. Each record in the training data contains storyid, title, sentence1, sentence2, sentence3, sentence4, sentence5. There are also validation and test set which contains same fields as that of the training set, additionally includes the sentence6, which is wrong ending for each story.
 
+
 ## Methology
 
 The overall process can be summerized in the following steps:
@@ -39,7 +40,7 @@ The overall process can be summerized in the following steps:
 
 3-2 Train with Test-Validation Dataset and Test with Test-Test Dataset
 
-### Library & Self-implemented: 
+#### Library & Self-implemented: 
 From these step for converting words in word2vec & reducing the dimensionality in PCA we used Gensim & Sklearn libraries. Bellow we explained the main components of our methodology:
 
 
