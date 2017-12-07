@@ -39,6 +39,13 @@ We prepared the data set to create the sentence6 for each story with the random 
 This generated the training data with 100,000 instances as each story will have a right ending and wrong ending entry in the train model.
 
 ## Methods
+The overall process can be summerized in the following steps:
+
+- Data Preparation & Negative Sampling (For Training Data)
+- Feature Extraction
+-- Using word2vec, reduced word2vec with PCA, sentiment analysis
+- Logistic Regression
+
 ### Word2vec
 Word2vec is one of the word embedding algorithms that are designed by Google using shallow neural networks. Like other word embedding methods, this model maps the word from a sparse discrete space to a dense continuous one. 
 The first method for implementation was using gensim word2vec library along with Google News 300-Feature pretrained model. Using this pretrained model, we obtained a feature map for each of train, test-val, and test-test. Then running a PCA, on top of that reduced the feature size to 50 features for each story. 
