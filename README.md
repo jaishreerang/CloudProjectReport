@@ -81,7 +81,7 @@ In our dataset we have two class labels as 0 0r 1 indicating whether the last se
 Gradient Ascent Logistic Regression is implemented in pyspark. This is a self implementation.
 
 ## Work Division - Team Members
-Jaishree Ranganathan - Logistic Regression (self implemenation), Area under ROC
+Jaishree Ranganathan - Logistic Regression (self implemenation), Area under ROC,
 Accuracy Calculation(self implementation), Logistic Regression MLlib implementation (For result comparison)
 
 Maryam Tavakoli - Data Preparation, Negative Sampling, Word2Vec, Sentiment Last method, PCA-transformation, Logistic Regression & AUC using sklearn (For data evaluation)
