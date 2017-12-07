@@ -41,10 +41,15 @@ This generated the training data with 100,000 instances as each story will have 
 ## Methods
 The overall process can be summerized in the following steps:
 
-- Data Preparation & Negative Sampling (For Training Data)
-- Feature Extraction
--- Using word2vec, reduced word2vec with PCA, sentiment analysis
-- Logistic Regression
+1- Data Preparation & Negative Sampling (For Training Data)
+2- Feature Extraction: For three datasets: Train, Validation and Test
+2-1 Using word2vec, reduced word2vec with PCA, sentiment analysis
+3- Logistic Regression
+3-1 Train with Train Dataset, and Test with Test Dataset
+3-2 Train with Test-Validation Dataset and Test with Test-Test Dataset
+
+Library & Self-implemented: 
+From these step for converting words in word2vec & reducing the dimensionality in PCA we used Gensim & Sklearn libraries.
 
 ### Word2vec
 Word2vec is one of the word embedding algorithms that are designed by Google using shallow neural networks. Like other word embedding methods, this model maps the word from a sparse discrete space to a dense continuous one. 
