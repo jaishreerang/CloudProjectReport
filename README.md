@@ -53,7 +53,7 @@ The overall process can be summerized in the following steps:
 
 3-2 Train with Test-Validation Dataset and Test with Test-Test Dataset
 
-Library & Self-implemented: 
+#### Library & Self-implemented: 
 From these step for converting words in word2vec & reducing the dimensionality in PCA we used Gensim & Sklearn libraries.
 
 ### Word2vec
