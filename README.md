@@ -41,7 +41,8 @@ The overall process can be summerized in the following steps:
 3-2 Train with Test-Validation Dataset and Test with Test-Test Dataset
 
 #### Library & Self-implemented: 
-From these step for converting words in word2vec & reducing the dimensionality in PCA we used Gensim & Sklearn libraries. Bellow we explained the main components of our methodology:
+From these step for converting words in word2vec & reducing the dimensionality in PCA we used Gensim & Sklearn libraries. 
+Below we explained the main components of our methodology:
 
 
 ### Data Preparation
@@ -77,10 +78,11 @@ In this story ending classification framework we used the classification method 
 
 In our dataset we have two class labels as 0 0r 1 indicating whether the last sentence is right story ending (1) or wrong story ending (0). We have list of independent variables, which are the sentences 1 to 4. The independent variables are represented in different formats based on the methods Word2Vec and Sentiment Last. The Gradient Ascent approach is implemented as part of this project. The derivation for Gradient Ascent is in [6].
 
-Gradient Ascent Logistic Regression is implemented in pyspark.
+Gradient Ascent Logistic Regression is implemented in pyspark. This is a self implementation.
 
 ## Work Division - Team Members
-Jaishree Ranganathan - Logistic Regression, ROC, Accuracy Calculation, MLlib implementation (For comparison)
+Jaishree Ranganathan - Logistic Regression (self implemenation), Area under ROC
+Accuracy Calculation(self implementation), Logistic Regression MLlib implementation (For result comparison)
 
 Maryam Tavakoli - Data Preparation, Negative Sampling, Word2Vec, Sentiment Last method, PCA-transformation, Logistic Regression & AUC using sklearn (For data evaluation)
 
