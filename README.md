@@ -23,22 +23,8 @@ Understanding stories in NLP has different aspect of complexity. Context, time f
 ## Dataset
 The data set used for the project is ROCStories, Cloze Test Competition dataset [1]. This dataset contains around 50,000 (train set) common sense stories, which have high-quality and a 4-sentence structure. Each record in the training data contains storyid, title, sentence1, sentence2, sentence3, sentence4, sentence5. There are also validation and test set which contains same fields as that of the training set, additionally includes the sentence6, which is wrong ending for each story.
 
-## Data Preparation
-The training dataset, did not contain the false entries, in this case the sentence 6 which is the wrong ending for the story. The sample data is shown in table below.
+## Methology
 
-| StoryID        | Title           | Sentence1       | Sentence2       | Sentence3       | Sentence4       | Sentence5  |
-|----------------|-----------------|-----------------|-----------------|-----------------|-----------------|------------|
-| 8bbe6d11-1e2e-413c-bf81-eaea05f4f1bd|David Drops the Weight|David noticed he had put on a lot of weight recently.|He examined his habits to try and figure out the reason.|He realized he'd been eating too much fast food lately.|He stopped going to burger places and started a vegetarian diet.|After a few weeks, he started to feel much better.|            
-
-We prepared the data set to create the sentence6 for each story with the random approach. In this approach each story ending (sentence 6) is randomly selected from the ending part of a different story in the training set. After that, the sentence 5 & 6 of each story are shuffled to have randomly T/F location in each place, and labeled all the records based on the location of the correct ending. There are other approaches for generating story ending like nearest ending and RNN. According to [2] we chose to use random approach based on the evaluation results. The resulting train data after appending the sentence 6 is as in below table.
-
-| StoryID        | Title           | Sentence1       | Sentence2       | Sentence3       | Sentence4       | Sentence5  | Sentence6 |
-|----------------|-----------------|-----------------|-----------------|-----------------|-----------------|------------|-----------|
-| 8bbe6d11-1e2e-413c-bf81-eaea05f4f1bd|David Drops the Weight|David noticed he had put on a lot of weight recently.|He examined his habits to try and figure out the reason.|He realized he'd been eating too much fast food lately.|He stopped going to burger places and started a vegetarian diet.|After a few weeks, he started to feel much better.|Hers was picked.|
-
-This generated the training data with 100,000 instances as each story will have a right ending and wrong ending entry in the train model.
-
-## Methods
 The overall process can be summerized in the following steps:
 
 1- Data Preparation & Negative Sampling (For Training Data)
@@ -53,8 +39,24 @@ The overall process can be summerized in the following steps:
 
 3-2 Train with Test-Validation Dataset and Test with Test-Test Dataset
 
-#### Library & Self-implemented: 
-From these step for converting words in word2vec & reducing the dimensionality in PCA we used Gensim & Sklearn libraries.
+### Library & Self-implemented: 
+From these step for converting words in word2vec & reducing the dimensionality in PCA we used Gensim & Sklearn libraries. Bellow we explained the main components of our methodology:
+
+
+### Data Preparation
+The training dataset, did not contain the false entries, in this case the sentence 6 which is the wrong ending for the story. The sample data is shown in table below.
+
+| StoryID        | Title           | Sentence1       | Sentence2       | Sentence3       | Sentence4       | Sentence5  |
+|----------------|-----------------|-----------------|-----------------|-----------------|-----------------|------------|
+| 8bbe6d11-1e2e-413c-bf81-eaea05f4f1bd|David Drops the Weight|David noticed he had put on a lot of weight recently.|He examined his habits to try and figure out the reason.|He realized he'd been eating too much fast food lately.|He stopped going to burger places and started a vegetarian diet.|After a few weeks, he started to feel much better.|            
+
+We prepared the data set to create the sentence6 for each story with the random approach. In this approach each story ending (sentence 6) is randomly selected from the ending part of a different story in the training set. After that, the sentence 5 & 6 of each story are shuffled to have randomly T/F location in each place, and labeled all the records based on the location of the correct ending. There are other approaches for generating story ending like nearest ending and RNN. According to [2] we chose to use random approach based on the evaluation results. The resulting train data after appending the sentence 6 is as in below table.
+
+| StoryID        | Title           | Sentence1       | Sentence2       | Sentence3       | Sentence4       | Sentence5  | Sentence6 |
+|----------------|-----------------|-----------------|-----------------|-----------------|-----------------|------------|-----------|
+| 8bbe6d11-1e2e-413c-bf81-eaea05f4f1bd|David Drops the Weight|David noticed he had put on a lot of weight recently.|He examined his habits to try and figure out the reason.|He realized he'd been eating too much fast food lately.|He stopped going to burger places and started a vegetarian diet.|After a few weeks, he started to feel much better.|Hers was picked.|
+
+This generated the training data with 100,000 instances as each story will have a right ending and wrong ending entry in the train model.
 
 ### Word2vec
 Word2vec is one of the word embedding algorithms that are designed by Google using shallow neural networks. Like other word embedding methods, this model maps the word from a sparse discrete space to a dense continuous one. 
