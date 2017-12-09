@@ -110,6 +110,17 @@ As most of the results may suggest, while these methods are suitable as an start
 
 ![alt text](https://github.com/jaishreerang/CloudProjectReport/blob/master/image.png "The evaluation results")
 
+In our experiments, we did not include the Word2vec with 600 features for training data because of the huge processing time it needed, but we ran them on validation - test data combination.
+
+
+As you can see, our results are very close to MLlib implementation, which means our logistic regression is well-developed!! Also, the overall results for the Val-Test is higher than Train-Test and Train-Val, which we think might be because of the nature of our "random negative sampling" in train-data in compare to the related data that they provided in Test and Validation. However, we need more investigation to make sure about the actual reason. 
+
+
+By comparing three feature sets, we have gotten better results from word2vec in compare to sentiment analysis, which probably is because of the more semantic information that vectors carried in compare to semantic vectors (which are just emotional level of the content). Also, the PCA and word2vec results are very close, which means the 50 features were enough, we really did not need that huge 600 features, which was not a surprise for us as the stories were not so long and the vocabularies are not completely irrelevant.
+
+
+Bellow you can find the detail numbers for our experiments:
+
 ##### Input Data
 
 Train Data          : pca_50_train_vector.csv
