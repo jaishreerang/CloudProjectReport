@@ -108,6 +108,8 @@ As most of the results may suggest, while these methods are suitable as an start
 
 #### Experiment1: Logistic Regression on Word2Vec Data (Using our Model and using MLlib)
 
+![alt text](https://github.com/jaishreerang/CloudProjectReport/blob/master/image.png "The evaluation results")
+
 ##### Input Data
 
 Train Data          : pca_50_train_vector.csv
