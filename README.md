@@ -107,7 +107,7 @@ In order to do the evaluation, we trained the model using three sets of features
 As most of the results may suggest, while these methods are suitable as an starting point of the prediction, we need more complicated feature extraction and learning method to be able to tackle the complexity of story understanding, specifically in this framework. The reason behind that is that semantic of story is far beyond even understanding the sentences themselves. Even though these stories were not long, still analyzing the context was so important to get an acceptable result in predicting the right ending. Yet, for some of more semantic based methods like word2vec, you can see a higher result. 
 
 #### Experiment1: Logistic Regression on Word2Vec Data (Using our Model and using MLlib)
-In the following chart you can see a summary of ROC value for our experiments with different feature sets, datasets, and both implemented Logistic-Regression and the MLlib one:
+In the following chart you can see a summary of ROC value for our experiments with different feature sets, datasets, and both implemented Logistic-Regression and the MLlib one. The values are rounded to 4 point precision:
 
 ![alt text](https://github.com/jaishreerang/CloudProjectReport/blob/master/image.png "The evaluation results")
 
